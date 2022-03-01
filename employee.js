@@ -1,5 +1,3 @@
-
-
 class Employee {
     constructor(name, id, email) {
         this.name = name
@@ -21,8 +19,6 @@ class Manager extends Employee {
 
     }
 
-
-
     // * `getRole()`&mdash;overridden to return `'Manager'`
 
 }
@@ -33,7 +29,6 @@ class Engineer extends Employee {
         super(name, id, email)
         this.gitHub = gitHub
     }
-
 
     getGithub()
 
