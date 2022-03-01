@@ -1,0 +1,40 @@
+header{ 
+    background-color: rgb(216, 52, 79);
+    color: white;
+    height: 150px;
+    width: 100%;
+
+}
+
+.card-header{
+    background-color:  rgb(48, 48, 221);
+    color: white;
+}
+
+.name-of-employee{
+font-size: 25px;
+}
+
+
+
+.position-of-employee{
+font-size: 23px;
+}
+
+.card-container{
+    margin-top: 50px;
+flex: flex;
+}
+
+.card{
+    margin: 5px;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+ul{
+    background: pink;
+}
+
+li{
+    background-color: white;
+}
