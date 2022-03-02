@@ -1,8 +1,10 @@
-
+const fs = require('fs')
 const inquirer = require('inquirer');
 const Manager = require('./lib/manager')
 const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
+const renderHTML = require('./src/renderHTML')
+
 
 let teamMembers = []
 
@@ -148,9 +150,20 @@ function buildNewIntern() {
 
 
 function compileTeam() {
-    console.log(teamMembers);
+    const newPage = new renderHTML;
+
+
+
+
+    fs.writeFile("index.html", (newPage.compileTeamCards(teamMembers)), (err) =>
+        err ? console.log(err) : console.log("Building team html")
+    );
+
+
 }
 
 
 
 buildTeam()
+
+
