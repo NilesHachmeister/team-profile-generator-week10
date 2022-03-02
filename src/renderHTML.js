@@ -18,7 +18,17 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
         let employeeSpecificInfo = ""
 
 
-        if (employeeRole === "manager") { }
+        if (element.role === "manager") {
+            employeeSpecificInfo = `Office number: ${element.officeNumber}`
+            employeeRole = `☕ ${element.getRole()}`
+        } else if (element.role === "engineer") {
+            employeeSpecificInfo = `GitHub:  <a href="https://github.com/${element.getGithub()}" target="_blank">${element.getGithub()}</a> `
+            elementRole = `🛠 ${element.getRole()} `
+        } else {
+            employeeSpecificInfo = `School: ${element.getSchool()}`
+            elementRole = `🎓 ${element.getRole()}`
+        }
+
 
 
         cardHTML += `<div class=" card" style="width: 18rem;">
@@ -29,7 +39,7 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
         <div class="card-body">
             <ul class="list-group m-3">
                 <li class="list-group-item">ID: ${element.getId()}</li>
-                <li class="list-group-item">Email: ${element.getEmail()}</li>
+                <li class="list-group-item">Email: <a href="mailto: ${element.getEmail()}">${element.getEmail()}</a></li>
                 <li class="list-group-item">${employeeSpecificInfo}</li>
             </ul>
         </div>

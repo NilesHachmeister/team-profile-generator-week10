@@ -10,10 +10,15 @@ let teamMembers = []
 
 
 
-// take user input and call a class to construct it, and then push it to team member
-// push each team member to the team member array
-// team member array is sent through a for loop to build each card that is added then all together returned to the html build page
+// fix emojis
 
+// style better
+
+// check readme
+
+// check flexworking correctly
+
+// change questiongs per class
 
 
 
