@@ -18,8 +18,8 @@ describe("Manager class", () => {
     describe("getRole method", () => {
         it("Should return manager regardless of how it is called", () => {
             const manager = new Manager("John", 1, "test@email.com", 4)
-            expect(manager.role).toEqual("manager")
-            expect(manager.getRole()).toEqual("manager")
+            expect(manager.role).toEqual("Manager")
+            expect(manager.getRole()).toEqual("Manager")
         })
     })
 

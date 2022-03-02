@@ -18,8 +18,8 @@ describe("Intern class", () => {
     describe("getRole method", () => {
         it("Should return intern regardless of how it is called", () => {
             const intern = new Intern("John", 1, "test@email.com", "Denver University")
-            expect(intern.role).toEqual("intern")
-            expect(intern.getRole()).toEqual("intern")
+            expect(intern.role).toEqual("Intern")
+            expect(intern.getRole()).toEqual("Intern")
         })
     })
 
