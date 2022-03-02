@@ -21,7 +21,7 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
         if (element.role === "Manager") {
             employeeSpecificInfo = `Office number: ${element.officeNumber}`
             employeeRole = `☕ ${element.getRole()}`
-        } else if (element.role === "Mngineer") {
+        } else if (element.role === "Engineer") {
             employeeSpecificInfo = `GitHub:  <a href="https://github.com/${element.getGithub()}" target="_blank">${element.getGithub()}</a> `
             employeeRole = `🛠 ${element.getRole()}`
         } else {

@@ -10,7 +10,7 @@ let teamMembers = []
 
 
 
-// fix emojis
+
 
 // style better
 
