@@ -43,7 +43,7 @@ function buildTeam() {
 
             let employee = new Manager(data.name, data.Id, data.email, data.officeNumber)
             teamMembers.push(employee)
-       
+
 
             promptForANewTeamMember()
         });
@@ -68,11 +68,11 @@ function promptForANewTeamMember() {
                 buildNewEngineer()
             } else if (data.addEmployee === "Add an intern") {
                 buildNewIntern()
-            }else{
+            } else {
                 compileTeam()
             }
 
-      
+
         });
 }
 
@@ -105,6 +105,8 @@ function buildNewEngineer() {
         ])
         .then((data) => {
 
+            let employee = new Engineer(data.name, data.Id, data.email, data.gitHub)
+            teamMembers.push(employee)
 
             promptForANewTeamMember()
         });
@@ -116,12 +118,28 @@ function buildNewIntern() {
         .prompt([
             {
                 type: 'input',
-                message: "Enter first user",
-                name: 'description',
+                message: "Enter employee's name",
+                name: 'name',
+            },
+            {
+                type: 'input',
+                message: "Enter employee's ID",
+                name: 'Id',
+            },
+            {
+                type: 'input',
+                message: "Enter employee's email address",
+                name: 'email',
+            },
+            {
+                type: 'input',
+                message: "Enter employee's school",
+                name: 'school',
             },
         ])
         .then((data) => {
-
+            let employee = new Intern(data.name, data.Id, data.email, data.school)
+            teamMembers.push(employee)
 
             promptForANewTeamMember()
         });
@@ -129,8 +147,8 @@ function buildNewIntern() {
 
 
 
-function compileTeam(){
-console.log(teamMembers);
+function compileTeam() {
+    console.log(teamMembers);
 }
 
 
