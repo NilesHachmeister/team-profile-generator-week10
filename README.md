@@ -52,7 +52,8 @@ npm test
 
 ## Example
 
-example
+An example video can be found at:
+https://drive.google.com/file/d/1pSOH65l2UrekmzBwBeChVFzQyOARY6AF/view
 
 ## Questions
 
