@@ -12,13 +12,17 @@ let teamMembers = []
 
 
 
-// style better
+
 
 // check readme
 
-// check flexworking correctly
 
-// change questiongs per class
+
+// comment
+
+// readme
+
+// video
 
 
 
@@ -27,22 +31,22 @@ function buildTeam() {
         .prompt([
             {
                 type: 'input',
-                message: "Enter employee's name",
+                message: "What is the team manager's name?",
                 name: 'name',
             },
             {
                 type: 'input',
-                message: "Enter employee's ID",
+                message: "What is the team manager's id?",
                 name: 'Id',
             },
             {
                 type: 'input',
-                message: "Enter employee's email address",
+                message: "What is the team manager's email?",
                 name: 'email',
             },
             {
                 type: 'input',
-                message: "Enter employee's office number",
+                message: "What is the team manager's office number?",
                 name: 'officeNumber',
             },
         ])
@@ -65,9 +69,9 @@ function promptForANewTeamMember() {
         .prompt([
             {
                 type: 'list',
-                message: "Would you like to add another employee?",
+                message: "Which type of team member would you like to add?",
                 name: 'addEmployee',
-                choices: ["Add an engineer", "Add an intern", "Finish building team"]
+                choices: ["Add an engineer", "Add an intern", "I don't want to add any more team members"]
             },
         ])
         .then((data) => {
@@ -91,22 +95,22 @@ function buildNewEngineer() {
         .prompt([
             {
                 type: 'input',
-                message: "Enter employee's name",
+                message: "What is your engineer's name?",
                 name: 'name',
             },
             {
                 type: 'input',
-                message: "Enter employee's ID",
+                message: "What is your engineer's id?",
                 name: 'Id',
             },
             {
                 type: 'input',
-                message: "Enter employee's email address",
+                message: "What is your engineer's email address?",
                 name: 'email',
             },
             {
                 type: 'input',
-                message: "Enter employee's gitHub username",
+                message: "What is your engineer's GitHub username?",
                 name: 'gitHub',
             },
         ])
@@ -125,22 +129,22 @@ function buildNewIntern() {
         .prompt([
             {
                 type: 'input',
-                message: "Enter employee's name",
+                message: "What is your intern's name?",
                 name: 'name',
             },
             {
                 type: 'input',
-                message: "Enter employee's ID",
+                message: "What is your intern's id?",
                 name: 'Id',
             },
             {
                 type: 'input',
-                message: "Enter employee's email address",
+                message: "What is your intern's email?",
                 name: 'email',
             },
             {
                 type: 'input',
-                message: "Enter employee's school",
+                message: "What is your intern's school?",
                 name: 'school',
             },
         ])
@@ -160,7 +164,7 @@ function compileTeam() {
 
 
 
-    fs.writeFile("index.html", (newPage.compileTeamCards(teamMembers)), (err) =>
+    fs.writeFile("./dist/index.html", (newPage.compileTeamCards(teamMembers)), (err) =>
         err ? console.log(err) : console.log("Building team html")
     );
 
