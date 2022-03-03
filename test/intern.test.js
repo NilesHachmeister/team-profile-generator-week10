@@ -1,5 +1,7 @@
 const Intern = require('../lib/intern');
 
+
+// this file is made to test the intern class
 describe("Intern class", () => {
     describe("intern's supers working properly", () => {
         it("Should get the correct name", () => {
@@ -22,7 +24,4 @@ describe("Intern class", () => {
             expect(intern.getRole()).toEqual("Intern")
         })
     })
-
-
-
 })

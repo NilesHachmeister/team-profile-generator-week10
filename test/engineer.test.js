@@ -1,5 +1,7 @@
 const Engineer = require('../lib/engineer');
 
+
+// this file is made to test the engineer class
 describe("Engineer class", () => {
     describe("engineer's supers working properly", () => {
         it("Should get the correct name", () => {
@@ -22,7 +24,4 @@ describe("Engineer class", () => {
             expect(engineer.getRole()).toEqual("Engineer")
         })
     })
-
-
-
 })

@@ -1,5 +1,7 @@
 const Manager = require('../lib/manager');
 
+
+// this file is made to test the manager class
 describe("Manager class", () => {
     describe("manager supers working properly", () => {
         it("Should get the correct name", () => {
@@ -22,6 +24,4 @@ describe("Manager class", () => {
             expect(manager.getRole()).toEqual("Manager")
         })
     })
-
-
 })

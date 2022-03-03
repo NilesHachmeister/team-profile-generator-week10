@@ -4,19 +4,18 @@ const fs = require('fs')
 function BuildHTMLPage() { }
 
 
+// this prototype is built do spit out the html file
+BuildHTMLPage.prototype.renderHTMLPage = function (teamArray) {
 
-BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
-
+    // this declares the variable that will be all of the cards that will go in the html container
     let cardHTML = ""
 
-
-
+    // this for loop goes through and takes each employee object and checks to see what role it is. It then creates a card for each employee and adds it to the cardHTML variable. The contents of the card depends on what role the employee has.
     for (let index = 0; index < teamArray.length; index++) {
         const element = teamArray[index];
 
         let employeeRole = element.role
         let employeeSpecificInfo = ""
-
 
         if (element.role === "Manager") {
             employeeSpecificInfo = `Office number: ${element.officeNumber}`
@@ -28,7 +27,6 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
             employeeSpecificInfo = `School: ${element.getSchool()}`
             employeeRole = `🎓 ${element.getRole()}`
         }
-
 
 
         cardHTML += `<div class=" card" style="width: 18rem;">
@@ -44,11 +42,10 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
             </ul>
         </div>
     </div> `
-
     }
 
 
-
+    // this returns the html with the cards added to it.
     return `<!DOCTYPE html>
     <html lang="en">
     
@@ -87,9 +84,6 @@ BuildHTMLPage.prototype.compileTeamCards = function (teamArray) {
     </body>
     
     </html>`
-
-
-
 }
 
 

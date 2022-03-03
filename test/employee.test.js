@@ -1,5 +1,7 @@
 const Employee = require('../lib/employee');
 
+
+// this file is made to test the employee class
 describe("Employee class", () => {
     describe("getName method", () => {
         it("Should return the name of this employee", () => {
@@ -28,5 +30,4 @@ describe("Employee class", () => {
             expect(employee.getRole()).toEqual("manager")
         })
     })
-
 })
